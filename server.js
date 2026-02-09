@@ -12,3 +12,7 @@ app.use("/", routes);
 app.listen(port, () => logger.info(`Your app is listening on port ${port}!`));
 
 
+app.get("/", (request, resource) => {
+  resource.send("Server is running");
+});
+
