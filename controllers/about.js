@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 import logger from "../utils/logger.js";
 
 const about = {
@@ -7,5 +7,6 @@ const about = {
     response.send('About the Playlist app');   
   },
 };
+
 
 export default about;

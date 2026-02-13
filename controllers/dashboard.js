@@ -3,7 +3,7 @@ import logger from "../utils/logger.js";
 
 const playlist = [
   {
-    id: 2,
+    id: 1,
     title: "Piano Sonata No. 3",
     artist: "Beethoven"
   },
@@ -21,10 +21,11 @@ const playlist = [
 
 const dashboard = {
   createView(request, response) {
-        logger.info("Dashboard page loading!")
+    logger.info("Dashboard page loading!")
     logger.debug("Loading the playlist", playlist);
     response.json(playlist);   
   },
 };
+
 
 export default dashboard;
