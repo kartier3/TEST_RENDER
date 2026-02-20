@@ -1,12 +1,21 @@
-'use strict'
-import logger from "../utils/logger.js";
+'use strict';
 
-const about = {
+import logger from "../utils/logger.js";
+import employee_info from "../models/employee.js";
+
+const employee_st = {
+
   createView(request, response) {
     logger.info("About page loading!");
-    response.send('About the Playlist app');   
+
+    const employee = employee_info.getEmployee();
+
+    response.render("about", {
+      title: "About",
+      employee: employee
+    });
   },
+
 };
 
-
-export default about;
+export default employee_st;
